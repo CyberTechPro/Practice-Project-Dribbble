@@ -1,0 +1,603 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    height: 105vh;
+    width: 100%;
+    background-color: #f8f8f8;
+    padding-left: 50px;
+    position: relative;
+    display: flex;
+}
+
+nav {
+    width: 600px;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 3.5%;
+}
+
+nav img {
+    height: 50px;
+    object-fit: cover;
+}
+
+nav #navbar-brand, nav #nav-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#navbar-brand  {
+    color: #138e9a;
+    margin-right: 50px;
+}
+
+#navbar-brand h3 {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+#nav-items a {
+    margin: 0 20px;
+    letter-spacing: 0.8;
+    font-size: 13px;
+    font-weight: 500;
+    color: black;
+    transition: .2s;
+}
+
+#nav-items a:hover {
+    color: #138e9a;
+}
+
+#header-content {
+    width: 50%;
+    height: calc(100%-10vh);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-right: 100px;
+}
+
+#header-content h1 {
+    font-weight: 500;
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+
+#header-content p {
+    font-size: 14px;
+    opacity: 0.6;
+    width: 80%;
+    line-height: 1.5;
+    margin-bottom: 70px;
+}
+
+#header-content a {
+    width: 50%;
+    height: 7%;
+}
+
+#header-content a button {
+    width: 100%;
+    height: 100%;
+    background-color: #138e9a;
+    border: none;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 50px 20px 100px -15px #000;
+    transition: .2s;
+}
+
+#header-content a button:hover {
+    background-color: transparent;
+    color: black;
+}
+
+#header-img {
+    display: inline-flex;
+    width: 50%;
+    height: calc(100%-10vh);
+    background-image: url(https://images.unsplash.com/photo-1633430590464-4914c1fbab92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80);
+    background-position: center -190px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#header-img #img-content {
+    position: absolute;
+    bottom: 0;
+    right: 20%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(99, 99, 99, 0.3);
+    padding: 20px 50px;
+    color: white;
+    line-height: 1.5;
+}
+
+#header-img #img-content p {
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+#header-img #img-content h3 {
+    font-weight: 500;
+}
+
+#header-img #img-content hr {
+    margin: 10px 0;
+}
+
+#header-img #img-content p i{
+    border-radius: 10px;
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+/* HEADER SECTION END */
+/* COMPANIES SECTION */
+
+
+.companies-b {
+    height: 30vh;
+    display: flex;
+    overflow: hidden;
+}
+
+.companies {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    animation: marquee 35s 0.5s linear infinite;
+    margin: 0 -10px;
+}
+
+.companies-b:hover .companies {
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.companies img {
+    height: 50px;
+    filter: grayscale(100%);
+    opacity: .6;
+    margin: 0 60px;
+}
+
+/* COMPANIES SECTION END */
+/* FEATURES SECTION START */
+
+#features {
+    width: 80%;
+    margin: 2rem auto;
+}
+
+.f1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.f-img img {
+    width: 80%;
+}
+
+.f-text h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.f-text p {
+    font-size: 13px;
+    position: relative;
+    opacity: .6;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    line-height: 1.5;
+}
+
+.f-text p::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: -5%;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #138e9a;
+}
+
+.f2 .f-img {
+    grid-column: 2 / 3;
+}
+
+.f2 .f-text {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+/* FEATURES SECTION END */
+/* PRICING SECTION START */
+
+#pricing {
+    width: 90%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-b {
+    width: 30%;
+    border: 1px solid #edebeb;
+    border-radius: 2px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.price {
+    text-align: center;
+    padding: 30px;
+    line-height: 1.5;
+}
+
+.price h2 {
+    color: #138e9a;
+    margin-bottom: 10px;
+}
+
+.price .plan-des {
+    opacity: .6;
+    font-size: 15px;
+}
+
+.price hr {
+    border: 1px solid #dad7d7;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.cost {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 15px;
+    margin: 30px 0;
+}
+
+.cost span {
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.price-des {
+    text-align: left;
+    font-size: 14px;
+}
+
+.price-des .head {
+    font-weight: 700;
+}
+
+.price-des p {
+    position: relative;
+    margin-left: 14px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.price-des p::before {
+    content: "";
+    position: absolute;
+    top: 35%;
+    left: -5%;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #138e9a;
+}
+
+.price-des .two-line::before {
+    content: "";
+    position: absolute;
+    top: 17%;
+    left: -5%;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #138e9a;
+}
+
+.price button {
+    width: 100%;
+    height: 50px;
+    background-color: #138e9a;
+    color: white;
+    font-weight: 500;
+    border: none;
+}
+
+.price-b .p-des {
+    font-size: 11px;
+    background-color: #f7f7f7;
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* PRICING SECTION END */
+/* TESTIMONIALS SECTION START */
+
+.testimonials {
+    padding-left: 70px;
+    margin: 7rem 0;
+}
+
+.testimonials h2 {
+    font-weight: 700;
+    font-size: 2.2rem;
+    line-height: 1.5;
+    margin: 3rem 0 ;
+}
+
+.all-cards {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.card-b {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.5;
+}
+
+.card {
+    border: 2px solid #edebeb;
+    padding: 20px;
+}
+
+.card p {
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.card .profile {
+    display: flex;
+    align-items: center;
+}
+
+.card .profile .profile-img {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    border-radius: 100%;
+    background-image: url(https://img.freepik.com/free-photo/emotional-portrait-young-man-closeup_1321-4398.jpg?w=360&t=st=1687284166~exp=1687284766~hmac=5723f298e74605f45a247e462cf1f0c2e522b681e252d61bec7a85819bddab9a);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 10px;
+}
+
+.profile .profile-des span {
+    font-size: 13px;
+    opacity: .6;
+}
+
+.card .profile .profile-img2 {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    border-radius: 100%;
+    background-image: url(https://img.freepik.com/free-photo/clueless-young-pretty-caucasian-girl-with-beret-hat-isolated-white-wall-with-copy-space_141793-116376.jpg?w=900&t=st=1687285252~exp=1687285852~hmac=5495ace18f6835a59b2c85dde5f48f291d1c7db9e04c440b5dc5193d847d74c0);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 10px;
+}
+
+.card .profile .profile-img3 {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    border-radius: 100%;
+    background-image: url(https://img.freepik.com/free-photo/close-up-man-portrait-outdoors_23-2148895215.jpg?w=1060&t=st=1687285488~exp=1687286088~hmac=e6b146d38e96a3f9f8a692298c5d4952db682c22f77a3459fb8c1e097561455c);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 10px;
+}
+
+/* TESTIMONIALS SECTION END */
+/* FAQ SECTION START */
+
+.faq {
+    width: 60%;
+    margin: 3rem auto;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq-container h2 {
+    font-size: 2.3rem;
+    margin-bottom: 3rem;
+}
+
+.faq-b {
+    align-self: flex-start;
+    background-color: #fafafa;
+    margin-bottom: 1.5rem;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+}
+
+.faq-b-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq-b h4 {
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.faq-b p {
+    font-weight: 300;
+    opacity: .6;
+    width: 80%;
+}
+
+.faq-b i {
+    font-weight: 700;
+}
+
+/* FAQ SECTION END */
+/* FOOTER START */
+
+.footer {
+    width: 80%;
+    margin: 4rem auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.item1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.item1-head {
+    display: flex;
+    align-items: flex-start;
+    color: #138e9a;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.ml-10 {
+    margin-left: -10px;
+}
+
+.item1-head img {
+    height: 50px;
+    margin-top: -15px;
+}
+
+.item1-head h3 {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.item1 p {
+    font-size: 14px;
+    opacity: .7;
+    width: 90%;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.socials {
+    display: flex;
+    margin-left: -10px;   
+}
+
+.socials a div {
+    background-color: #eff1f3;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 7px;
+    transition: .3s;
+}
+
+.socials a div:hover {
+    background-color: #138e9a;
+}
+
+.socials a div:hover i {
+    color: white;
+}
+
+.socials i {
+    color: #5a7184;
+    transition: .3s;
+}
+
+.item2 {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+    margin-top: -3px;
+}
+
+.item2 h3 {
+    color: #183b56;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.item2 a {
+    width: fit-content;
+    font-size: 13px;
+    opacity: .9;
+    font-weight: 500;
+    color: #183b56;
+    margin-bottom: 20px;
+    transition: .3s;
+}
+
+.item2 a:hover {
+    color: #138e9a;
+}
+
+
+
+
+
+
+
